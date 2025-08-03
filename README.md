@@ -48,3 +48,74 @@ Espera máxima de 15 segundos para generación de perfil
 
 
 Archivo: popup.js
+
+--------------------------------------
+
+Errores conocidos:
+- CRITICO: No se genera un perfil, por lo que la extension no puede iniciar nada. 
+por lo tanto:
+ El popup no sirve se queda asi:
+
+Current Identity
+Profile:
+Generating...
+Location:
+Please wait
+Device:
+Initializing
+Session ID:
+7012cd6ecc4a4efd... (Aveces lo muestra, pero solo al iniciar)
+Coherence Check
+⏳
+Timezone Match
+Generating...
+⏳
+Language Match
+Generating...
+⏳
+WebGL Consistency
+Generating...
+⏳
+VPN Detection
+Checking...
+Camouflage Score
+0%
+Detected Platform
+🌐
+None
+
+
+-[Chameleon] Could not override Error constructor: TypeError: Cyclic __proto__ value
+Contexto
+https://www.twitch.tv/el_lumy
+Seguimiento de la pila
+content/modules/interceptors/meta-proxy.js:148 (interceptErrorStackTraces)
+content/modules/interceptors/meta-proxy.js:27 (apply)
+...
+                console.warn('[Chameleon] Could not override Error constructor:', e);
+...
+            this.interceptErrorStackTraces();
+...
+
+content/chameleon-main.js:323 (initialize)
+...
+        metaProxy.apply();
+...
+
+-[Chameleon Main] Initialization failed: TypeError: Cyclic __proto__ value
+Contexto
+https://www.twitch.tv/el_lumy
+Seguimiento de la pila
+content/chameleon-main.js:428 (initialize)
+...
+      console.error('[Chameleon Main] Initialization failed:', error);
+...
+
+-[Chameleon Popup] Initialization error: Error: Profile generation timeout
+Contexto
+ui/popup.html
+Seguimiento de la pila
+ui/popup.js:147 (init)
+...
+            console.error('[Chameleon Popup] Initialization error:', error);
+...
