@@ -54,7 +54,7 @@ Archivo: popup.js
 Errores conocidos:
 - CRITICO: No se genera un perfil, por lo que la extension no puede iniciar nada. 
 por lo tanto:
- El popup no sirve se queda asi:
+ El popup se queda asi:
 
 Current Identity
 Profile:
